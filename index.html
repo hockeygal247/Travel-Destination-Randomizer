@@ -4,12 +4,18 @@
   <meta charset="UTF-8"/>
   <title>Final</title>
   <style>
-	body { background-color: dodgerblue;
+	body { background-color: #F4EDEA;
 		font-family: optima;
-		color: midnightblue;
+		color: #12263A;
 		text-align: center;
 		}
 	p { font-size: x-large; }
+    .airplane { height: 250px;
+        width: 250px; }
+    .description { width: 50%;
+        text-align: center; 
+        margin: auto;}
+    .choices { font-size: 200%;}
    </style>
   </head>
    <script>
@@ -44,35 +50,37 @@
 	   const randomSouthAmericaCountry = southAmerica[Math.floor(Math.random() * southAmerica.length)];
 
 		if (document.getElementById('africa').checked) {
-            document.getElementById('output').textContent = randomAfricaCountry;
+            document.getElementById('output').textContent = randomAfricaCountry + '!';
         }
 		else if (document.getElementById('asia').checked) {
-			return randomAsiaCountry;
+			document.getElementById('output').textContent = randomAsiaCountry + '!';
 		}
 		else if (document.getElementById('australia').checked) {
-			return randomAustraliaCountry;
+			document.getElementById('output').textContent = randomAustraliaCountry + '!';
 		}
 		else if (document.getElementById('europe').checked) {
-			return randomEuropeCountry;
+			document.getElementById('output').textContent = randomEuropeCountry + '!';
 		}
 		else if (document.getElementById('northAmerica').checked) {
-			return randomNorthAmericaCountry;
+			document.getElementById('output').textContent = randomNorthAmericaCountry + '!';
 		}
 		else if (document.getElementById('southAmerica').checked) {
-			return randomSouthAmericaCountry;
+			document.getElementById('output').textContent = randomSouthAmericaCountry + '!';
 		}
 		}
    </script>
   <body>
-   <h1>What country should I visit?</h1>
+   <h1>Random Country Destination Generator</h1><hr>
+   <p class="description">Just select the continent you would like to go to, click submit, and see what country you should visit next!</p><br>
+   <img src="images/flugzeug.jpg" alt="View from an airplane" class="airplane"> 
 	<form id="continentChoice">
-	  <p>Which continent do you want to go to?</p>
-		<label for="Africa"><input type="radio" name="destination" value="Africa" id="africa" onclick="">Africa</label><br>
-		<label for="Asia"><input type="radio" name="destination" value="Asia" id="asia">Asia</label><br>
-		<label for="Australia"><input type="radio" name="destination" value="Australia" id="australia">Australia</label><br>
-		<label for="Europe"><input type="radio" name="destination" value="Europe" id="europe">Europe</label><br>
-		<label for="NorthAmerica"><input type="radio" name="destination" value="North America" id="northAmerica">North America</label><br>
-		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica">South America</label><br>
+	  <p>Which continent do you want to visit?</p>
+		<label for="Africa"><input type="radio" name="destination" value="Africa" id="africa"  class="choices">Africa</label><br>
+		<label for="Asia"><input type="radio" name="destination" value="Asia" id="asia" class="choices">Asia</label><br>
+		<label for="Australia"><input type="radio" name="destination" value="Australia" id="australia" class="choices">Australia</label><br>
+		<label for="Europe"><input type="radio" name="destination" value="Europe" id="europe" class="choices">Europe</label><br>
+		<label for="NorthAmerica"><input type="radio" name="destination" value="North America" id="northAmerica" class="choices">North America</label><br>
+		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica" class="choices">South America</label><br>
 		<p><label for="randDest">Your randomly generated destination is:</label>
 		<label id="output"></label><br>
 		<input type="button" name="destination" value="Submit" onclick="generateDest()"/>
