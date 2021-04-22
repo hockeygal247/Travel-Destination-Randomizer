@@ -32,29 +32,36 @@
 		"Luxembourg", "Malta", "Iceland", "Andorra", "Liechtenstein", "San Marino", "Holy See"];
 	 const northAmerica = [ "Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Canada", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", 
 		"El Salvador", "Grenada", "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "Saint Kitts and Nevis", "Saint Lucia", 
-		"Saint Vincent and the Grenadines", "Tinidad and Tobago", "United States of America"];
+		"Saint Vincent and the Grenadines", "Trinidad and Tobago", "United States of America"];
 	 const southAmerica = [ "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela" ];
 	 
-		function generateDest(destination) {
-		if (document.getElementById('africa').checked {
-			return africa[Math.floor(Math.random() * africa.length)];
+	 function generateDest(continent) {	
+	   const randomAfricaCountry = africa[Math.floor(Math.random() * africa.length)];
+	   const randomAsiaCountry = asia[Math.floor(Math.random() * asia.length)];
+	   const randomAustraliaCountry = australia[Math.floor(Math.random() * australia.length)];
+	   const randomEuropeCountry = europe[Math.floor(Math.random() * europe.length)];
+	   const randomNorthAmericaCountry = northAmerica[Math.floor(Math.random() * northAmerica.length)];
+	   const randomSouthAmericaCountry = southAmerica[Math.floor(Math.random() * southAmerica.length)];
+
+		if (document.getElementById('africa').checked) {
+            document.getElementById('output').textContent = randomAfricaCountry;
+        }
+		else if (document.getElementById('asia').checked) {
+			return randomAsiaCountry;
 		}
-		else if (document.getElementById('asia').checked {
-			return asia[Math.floor(Math.random() * asia.length)];
-		}
-		else if (document.getElementById('australia').checked {
-			return australia[Math.floor(Math.random() * australia.length)];
+		else if (document.getElementById('australia').checked) {
+			return randomAustraliaCountry;
 		}
 		else if (document.getElementById('europe').checked) {
-			return europe[Math.floor(Math.random() * europe.length)];
+			return randomEuropeCountry;
 		}
-		else if (document.getElementById('northAmerica').checked {
-			return northAmerica[Math.floor(Math.random() * northAmerica.length)];
+		else if (document.getElementById('northAmerica').checked) {
+			return randomNorthAmericaCountry;
 		}
-		else if (document.getElementById('southAmerica').checked {
-			return southAmerica[Math.floor(Math.random() * southAmerica.length)];
+		else if (document.getElementById('southAmerica').checked) {
+			return randomSouthAmericaCountry;
 		}
-}
+		}
    </script>
   <body>
    <h1>What country should I visit?</h1>
@@ -67,8 +74,8 @@
 		<label for="NorthAmerica"><input type="radio" name="destination" value="North America" id="northAmerica">North America</label><br>
 		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica">South America</label><br>
 		<p><label for="randDest">Your randomly generated destination is:</label>
-		<input type="text" name="destination" onclick="generateDest()"></p>
-		<input type="button" value="Submit" onclick="generateDest()";>
+		<label id="output"></label><br>
+		<input type="button" name="destination" value="Submit" onclick="generateDest()"/>
 	</form>
   </body>
 </html>
