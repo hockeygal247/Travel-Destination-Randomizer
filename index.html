@@ -9,9 +9,13 @@
 		color: #12263A;
 		text-align: center;
 		}
+	h1 { font-family: Helvetica, sans-serif, sans-serif;
+		font-size: 300%;}
 	p { font-size: x-large; }
     .airplane { height: 250px;
-        width: 250px; }
+        width: 250px; 
+		border-radius: 25px;
+		border: solid 2px black; }
     .description { width: 50%;
         text-align: center; 
         margin: auto;}
@@ -72,7 +76,7 @@
   <body>
    <h1>Random Country Destination Generator</h1><hr>
    <p class="description">Just select the continent you would like to go to, click submit, and see what country you should visit next!</p><br>
-   <img src="flugzeug.jpg" alt="View from an airplane" class="airplane"> 
+   <img src="images/flugzeug.jpg" alt="View from an airplane" class="airplane"> 
 	<form id="continentChoice">
 	  <p>Which continent do you want to visit?</p>
 		<label for="Africa"><input type="radio" name="destination" value="Africa" id="africa"  class="choices">Africa</label><br>
@@ -83,7 +87,7 @@
 		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica" class="choices">South America</label><br>
 		<p><label for="randDest">Your randomly generated destination is:</label>
 		<label id="output"></label><br>
-		<input type="button" name="destination" value="Submit" onclick="generateDest()"/>
+		<input type="button" name="destination" value="Show Me!" onclick="generateDest()"/>
 	</form>
   </body>
 </html>
