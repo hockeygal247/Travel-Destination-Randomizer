@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8"/>
+  <title>Chapter 19</title>
+  <style>
+	body { background-color: dodgerblue;
+		font-family: optima;
+		color: midnightblue;
+		text-align: center;
+		}
+	p { font-size: x-large; }
+   </style>
+  </head>
+  <body>
+   <h1>What country should I visit?</h1>
+   <script>
+	 let africaCountries = ["Nigeria", "Ethiopia", "Egypt", "DR Congo", "Tanzania", "South Africa", "Kenya", "Uganda", "Algeria", "Sudan", "Morocco", 
+		"Angola", "Mozambique", "Ghana", "Madagascar", "Cameroon", "Cote d'Ivoire", "Niger", "Burkina Faso", "Mali", "Malawi", "Zambia", "Senegal", "Chad", 
+		"Somalia", "Zimbabwe", "Guinea", "Rwanda", "Benin", "Burundi", "Tunisia", "South Sudan", "Togo", "Sierra Leone", "Libya", "Congo", "Liberia", 
+		"Central African Republic", "Mauritania", "Eritrea", "Namibia", "Gambia", "Botswana", "Gabon", "Lesotho", "Guinea-Bissau", "Equatorial Guinea", "Mauritius",
+		"Eswatini", "Djibouti", "Comoros", "Cabo Verde", "Sao Tome and Principe", "Seychelles"];
+	 let randomAfrica = Math.floor(Math.random() * africaCountries.length);
+	 let asiaCountries = ["China", "India", "Indonesia", "Pakistan", "Bangladesh", "Japan", "Philippines", "Vietnam", "Turkey", "Iran", "Thailand", "Myanmar", 
+		"South Korea", "Iraq", "Afghanistan", "Saudi Arabia", "Uzbekistan", "Malaysia", "Yemen", "Nepal", "North Korea", "Sri Lanka", "Kazakhstan", "Syria",
+		"Cambodia", "Jordan", "Azerbaijan", "United Arab Emirates", "Tajikistan", "Isreal", "Laos", "Lebanon", "Kyrgyzstan", "Turkmenistan", "Singapore", "Oman",
+		"State of Palestine", "Kuwait", "Georgia", "Mongolia", "Armenia", "Qatar", "Bahrain", "Timor-Leste", "Cyprus", "Bhutan", "Maldives", "Brunei"];
+	 
+	 let australiaCountries = [ "Australia", "Fiji", "Kiribati", "Marshall Islands", "Micronesia", "Nauru", "New Zealand", "Palau", "Papua New Guinea", 
+		"Samoa", "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu"];
+	 let europeCountries = [ "Russia", "Germany", "United Kingdom", "France", "Italy", "Spain", "Ukraine", "Poland", "Romania", "Netherlands", "Belgium", 
+		"Czech Republic", "Greece", "Portugal", "Sweden", "Hungary", "Belarus", "Austria", "Serbia", "Switzerland", "Bulgaria", "Denmark", "Finland", "Slovakia",
+		"Norway", "Ireland", "Croatia", "Moldova", "Bosnia and Herzegovina", "Albania", "Lithuania", "North Macedonia", "Slovenia", "Latvia", "Estonia", "Montenegro", 
+		"Luxembourg", "Malta", "Iceland", "Andorra", "Liechtenstein", "San Marino", "Holy See"];
+	 let northAmericaCountries = [ "Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Canada", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", 
+		"El Salvador", "Grenada", "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "Saint Kitts and Nevis", "Saint Lucia", 
+		"Saint Vincent and the Grenadines", "Tinidad and Tobago", "United States of America"];
+	 let southAmericaCountries = [ "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela" ];
+	 let randomAfricaCountry = africaCountries[Math.floor(Math.random() * array.length)];
+	 let randomAsiaCountry = asiaCountries[Math.floor(Math.random() * array.length)];
+	 let randomAustraliaCountry = australiaCountries[Math.floor(Math.random() * array.length)];
+	 let randomEuropeCountry = europeCountries[Math.floor(Math.random() * array.length)];
+	 let randomNorthAmericaCountry = northAmericaCountries[Math.floor(Math.random() * array.length)];
+	 let randomSouthAmericaCountry = southAmericaCountries[Math.floor(Math.random() * array.length)];
+	 function countryChoice(destination) {
+		if (destination == "africaCountries") {
+		alert("Just like the sky!");
+		}
+		else if (destination == "asiaCountries") {
+		alert("Just like shiraz!");
+		}
+		else if (destination == "australiaCountries") {
+		alert("Just like the sky!");
+		}
+		else if (destination == "europeCountries") {
+		alert("Just like the sky!");
+		}
+		else if (destination == "northAmericaCountries") {
+		alert("Just like the sky!");
+		}
+		else if (destination == "southAmericaCountries") {
+		alert("Just like the sky!");
+		}
+}
+		function checkButton(destination) {
+		if (document.getElementById('africa').checked {
+			return africaCountries[Math.floor(Math.random() * africaCountries.length)];
+		}
+		else if (document.getElementById('asia').checked {
+			return asiaCountries[Math.floor(Math.random() * asiaCountries.length)];
+		}
+		else if (document.getElementById('australia').checked {
+			return australiaCountries[Math.floor(Math.random() * australiaCountries.length)];
+		}
+		else if (document.getElementById('europe').checked) {
+			return europeCountries[Math.floor(Math.random() * europeCountries.length)];
+		}
+		else if (document.getElementById('northAmerica').checked {
+			return northAmericaCountries[Math.floor(Math.random() * northAmericaCountries.length)];
+		}
+		else if (document.getElementById('southAmerica').checked {
+			return southAmericaCountries[Math.floor(Math.random() * southAmericaCountries.length)];
+		}
+}
+   </script>
+	<form id="continentChoice">
+	  <p>Which continent do you want to go to?</p>
+		<label for="Africa"><input type="radio" name="destination" value="Africa" id="africa" onclick="">Africa</label><br>
+		<label for="Asia"><input type="radio" name="destination" value="Asia" id="asia">Asia</label><br>
+		<label for="Australia"><input type="radio" name="destination" value="Australia" id="australia">Australia</label><br>
+		<label for="Europe"><input type="radio" name="destination" value="Europe" id="europe">Europe</label><br>
+		<label for="NorthAmerica"><input type="radio" name="destination" value="North America" id="northAmerica">North America</label><br>
+		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica">South America</label><br>
+		<p><label for="randDest">Your randomly generated destination is:</label>
+		<input type="text" name="randomDest" onclick="checkButton()"></p>
+		<input type="button" value="Submit" onclick="checkButton()";>
+	</form>
+  </body>
+</html>
