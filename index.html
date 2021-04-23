@@ -1,27 +1,40 @@
 <!doctype html>
-<html>
+<html lang="en">
  <head>
   <meta charset="UTF-8"/>
   <title>Final</title>
   <style>
 	body { background-color: #F4EDEA;
-		font-family: optima;
 		color: #12263A;
 		text-align: center;
 		}
-	h1 { font-family: Helvetica, sans-serif, sans-serif;
-		font-size: 300%;}
-	p { font-size: x-large; }
+	h1 { font-family: Helvetica, Arial, sans-serif;
+		font-size: 300%;
+		color:#12263A; 
+		}
     .airplane { height: 250px;
         width: 250px; 
 		border-radius: 25px;
 		border: solid 2px black; }
-    .description { width: 50%;
+    .description { width: 65%;
         text-align: center; 
-        margin: auto;}
-    .choices { font-size: 200%;}
+        margin: auto;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 1.5em;}
+    form label input { font-size: 3em;}
+	hr { border-top: 2px solid black;
+		width: 80%;}
+	.question { font-family: Helvetica, Arial, sans-serif;
+		font-size: 1.4em;}
+	.generation { font-family: Helvetica, Arial, sans-serif;
+		font-size: 1.4em; }
+	.button {margin-top: 15px; 
+		font-size: 1em;}
+	.choices { font-size: 1.1em;
+		font-family: Helvetica, Arial, sans-serif; }
+	form label input { margin-bottom: 10px; }
+	#output { font-weight: bold;}
    </style>
-  </head>
    <script>
 	 const africa = ["Nigeria", "Ethiopia", "Egypt", "DR Congo", "Tanzania", "South Africa", "Kenya", "Uganda", "Algeria", "Sudan", "Morocco", 
 		"Angola", "Mozambique", "Ghana", "Madagascar", "Cameroon", "Cote d'Ivoire", "Niger", "Burkina Faso", "Mali", "Malawi", "Zambia", "Senegal", "Chad", 
@@ -73,21 +86,22 @@
 		}
 		}
    </script>
+   </head>
   <body>
-   <h1>Random Country Destination Generator</h1><hr>
+   <h1>Random Country Destination Generator</h1><hr><br>
    <p class="description">Just select the continent you would like to go to, click submit, and see what country you should visit next!</p><br>
-   <img src="flugzeug.jpg" alt="View from an airplane" class="airplane"> 
+   <img src="images/flugzeug.jpg" alt="View from an airplane" class="airplane"> 
 	<form id="continentChoice">
-	  <p>Which continent do you want to visit?</p>
-		<label for="Africa"><input type="radio" name="destination" value="Africa" id="africa"  class="choices">Africa</label><br>
-		<label for="Asia"><input type="radio" name="destination" value="Asia" id="asia" class="choices">Asia</label><br>
-		<label for="Australia"><input type="radio" name="destination" value="Australia" id="australia" class="choices">Australia</label><br>
-		<label for="Europe"><input type="radio" name="destination" value="Europe" id="europe" class="choices">Europe</label><br>
-		<label for="NorthAmerica"><input type="radio" name="destination" value="North America" id="northAmerica" class="choices">North America</label><br>
-		<label for="SouthAmerica"><input type="radio" name="destination" value="South America" id="southAmerica" class="choices">South America</label><br>
-		<p><label for="randDest">Your randomly generated destination is:</label>
+	  <p class="question">Which continent do you want to visit?</p>
+		<label for="africa" class="choices"><input type="radio" name="destination" value="Africa" id="africa"  class="choices">Africa</label><br>
+		<label for="asia" class="choices"><input type="radio" name="destination" value="Asia" id="asia" class="choices">Asia</label><br>
+		<label for="australia" class="choices"><input type="radio" name="destination" value="Australia" id="australia" class="choices">Australia</label><br>
+		<label for="europe" class="choices"><input type="radio" name="destination" value="Europe" id="europe">Europe</label><br>
+		<label for="northAmerica" class="choices"><input type="radio" name="destination" value="North America" id="northAmerica" class="choices">North America</label><br>
+		<label for="southAmerica" class="choices"><input type="radio" name="destination" value="South America" id="southAmerica" class="choices">South America</label><br>
+		<p class="generation"><label for="randDest">Your randomly generated destination is:</label>
 		<label id="output"></label><br>
-		<input type="button" name="destination" value="Show Me!" onclick="generateDest()"/>
+		<input type="button" name="destination" value="Show Me!" class="button" onclick="generateDest()"/>
 	</form>
   </body>
 </html>
